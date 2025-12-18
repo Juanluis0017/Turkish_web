@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Turkish de la Torre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="assest/logo_turkish.jpg" alt="Escudo" class="logo-img">
+            <div class="brand-name">Turkish De La Torre</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="partidos.html">Partidos</a></li>
+                <li><a href="plantilla.html">Plantilla</a></li>
+
+                <li><button class="theme-btn" id="theme-toggle"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="carousel-container">
+        <div class="slide active">
+            <img src="assest/equipo.jpg" onclick="openLightbox(this.src)">
+        </div>
+        <div class="slide">
+            <img src="assest/equipo2.JPG" onclick="openLightbox(this.src)">
+        </div>
+        <div class="carousel-controls">
+            <button class="control-btn" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="control-btn" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="container">
+        
+        <div class="section-header-row">
+            <h2 class="section-title" style="margin-bottom: 0;">Últimos Partidos</h2>
+            <a href="partidos.html" class="see-all-link">Ver todos los partidos <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="matches-container">
+            
+            <div class="match-card" onclick="openMatchModal('Resumen del Partido', '5 - 4', 
+                `<div class='event-list'>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Papoño</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Riki</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Said (x2)</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Arenas</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Kuko</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
+                </div>`, 
+                ['assest/payito.JPG', 'assest/payo2.JPG'])">
+                
+                <div class="teams-row">
+                    <div class="team"><img src="assest/logo_turkish.jpg"><span>TURKISH DE LA TORRE</span></div>
+                    <div class="score">5 - 4</div>
+                    <div class="team"><img src="assest/payo.png"><span>EL PAYO CAYETANO</span></div>
+                </div>
+                <p>14/12/2025 - Jornada 11</p>
+            </div>
+
+            <div class="match-card" onclick="openMatchModal('Resumen del Partido', '1 - 4', 
+                `<div class='event-list'>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Arenas</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Jorge</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Carols</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Diego (p.p)</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Riki</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
+                    <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Carlos</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
+
+                </div>`, 
+                ['assest/la_roca.jpg', 'assest/equipo.jpg'])">
+                
+                <div class="teams-row">
+                    <div class="team"><img src="assest/la_roca.jpg"><span>UD LA ROCA</span></div>
+                    <div class="score">1 - 4</div>
+                    <div class="team"><img src="assest/logo_turkish.jpg"><span>TURKISH DE LA TORRE</span></div>
+                </div>
+                <p>06/12/2025 - Jornada 10</p>
+            </div>
+
+            <div class="match-card" onclick="openMatchModal('Resumen del Partido', '2 - 2', 
+                `<div class='event-list'>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Said</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Mario Flores</p></div><i class='fas fa-futbol event-icon'></i></div>
+                </div>`, 
+                ['assest/duendes.png'])">
+                
+                <div class="teams-row">
+                    <div class="team"><img src="assest/logo_turkish.jpg"><span>TURKISH DE LA TORRE</span></div>
+                    <div class="score">2 - 2</div>
+                    <div class="team"><img src="assest/duendes.png"><span>TEAM DUENDES</span></div>
+                </div>
+                <p>22/11/2025 - Jornada 9</p>
+            </div>
+
+        </div>
+    </section>
+
+    <hr class="full-divider">
+
+    <section class="container">
+        <div style="text-align: left; margin-bottom: 20px;">
+            <h2 class="section-title">Top Goleadores</h2>
+        </div>
+        
+        <div class="podium-container">
+            <div class="podium-item">
+                <div class="player-info"><span class="player-name">Carlos F.</span><span class="player-goals">5</span></div>
+                <div class="podium-bar pos-4">4</div>
+            </div>
+            <div class="podium-item">
+                <div class="player-info"><span class="player-name">Arenas</span><span class="player-goals">7</span></div>
+                <div class="podium-bar pos-2">2</div>
+            </div>
+            <div class="podium-item">
+                <div class="player-info pos-1-info"><i class="fas fa-crown" style="color:var(--primary-gold); margin-bottom:5px;"></i><span class="player-name">Said</span><span class="player-goals">12</span></div>
+                <div class="podium-bar pos-1">1</div>
+            </div>
+            <div class="podium-item">
+                <div class="player-info"><span class="player-name">Mario F.</span><span class="player-goals">7</span></div>
+                <div class="podium-bar pos-3">3</div>
+            </div>
+            <div class="podium-item">
+                <div class="player-info"><span class="player-name">A. Luque</span><span class="player-goals">4</span></div>
+                <div class="podium-bar pos-5">5</div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="full-divider">
+
+    <section class="container shop-section">
+        <div style="text-align: left; margin-bottom: 20px;">
+            <h2 class="section-title">Tienda Oficial</h2>
+        </div>
+        <div class="shop-grid">
+            <div class="shop-card">
+                <img src="assest/camiseta.jpg" alt="Camiseta" class="shop-img">
+                <h3>Camiseta</h3>
+                <p style="color: #666; font-size: 0.9rem;">Temporada 25/26</p>
+                <div class="price-tag">25,00€</div>
+                <a href="https://zentral.es/producto/turkish-de-la-torre/" target="_blank" class="buy-btn">COMPRAR</a>
+            </div>
+            <div class="shop-card">
+                <img src="assest/pantalon.jpg" alt="Pantalon" class="shop-img">
+                <h3>Pantalón</h3>
+                <p style="color: #666; font-size: 0.9rem;">Temporada 25/26</p>
+                <div class="price-tag">9,95€</div>
+                <a href="https://zentral.es/producto/turkish-de-la-torre/" target="_blank" class="buy-btn">COMPRAR</a>
+            </div>
+            <div class="shop-card">
+                <img src="assest/sudadera.jpg" alt="Sudadera" class="shop-img">
+                <h3>Sudadera</h3>
+                <p style="color: #666; font-size: 0.9rem;">Edición Invierno</p>
+                <div class="price-tag">24,95€</div>
+                <a href="https://zentral.es/producto/turkish-de-la-torre/" target="_blank" class="buy-btn">COMPRAR</a>
+            </div>
+            <div class="shop-card">
+                <img src="assest/polo.jpg" alt="Polo" class="shop-img">
+                <h3>Polo</h3>
+                <p style="color: #666; font-size: 0.9rem;">Edicion Verano</p>
+                <div class="price-tag">19,95€</div>
+                <a href="https://zentral.es/producto/turkish-de-la-torre/" target="_blank" class="buy-btn">COMPRAR</a>
+            </div>
+            <div class="shop-card">
+                <img src="assest/mochila.jpg" alt="Mochila" class="shop-img">
+                <h3>Mochila Entrenamiento</h3>
+                <p style="color: #666; font-size: 0.9rem;">Con zapatillero incluido</p>
+                <div class="price-tag">18,95€</div>
+                <a href="https://zentral.es/producto/turkish-de-la-torre/" target="_blank" class="buy-btn">COMPRAR</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <h4>AVISOS LEGALES</h4>
+            <div class="legal-links">
+                <a onclick="cookieAlert()">Política de Cookies</a>
+                <a onclick="cookieAlert()">Aviso Legal</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/turkishdelatorrecf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <div id="matchModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMatchModal()">&times;</span>
+            
+            <div class="match-modal-left">
+                <h2 id="modalMatchTitle" class="match-title"></h2>
+                <h1 id="modalScore" class="match-score"></h1>
+                <div id="modalDetails"></div>
+            </div>
+
+            <div class="match-modal-right">
+                <div class="modal-carousel-wrapper">
+                    <button class="m-arrow m-prev" onclick="changeMatchSlide(-1)">&#10094;</button>
+                    <div id="matchSlidesContainer"></div>
+                    <button class="m-arrow m-next" onclick="changeMatchSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightboxModal" class="modal" style="background:rgba(0,0,0,0.95)">
+        <span class="close" onclick="closeLightbox()" style="color:white">&times;</span>
+        <img class="lightbox-img" id="lightboxImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

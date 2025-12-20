@@ -16,7 +16,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" style="color:white; border-bottom:2px solid white;">Inicio</a></li>
                 <li><a href="partidos.html">Partidos</a></li>
                 <li><a href="plantilla.html">Plantilla</a></li>
 
@@ -47,16 +47,33 @@
 
         <div class="matches-container">
             
+            <div class="match-card" onclick="openMatchModal('Resumen del Partido', '2 - 2', 
+                `<div class='event-list'>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Said</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Said (No penalti no party)</p></div><div class='penalty-icon'><i class='fas fa-futbol'></i></div></div>
+                    <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Said</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
+
+                </div>`, 
+                ['assest/duendes.png'])">
+                
+                <div class="teams-row">
+                    <div class="team"><img src="assest/logo_turkish.jpg"><span>2 TOQUES FC</span></div>
+                    <div class="score">1 - 2</div>
+                    <div class="team"><img src="assest/2TOQUES.jpg"><span>TURKISH DE LA TORRE</span></div>
+                </div>
+                <p>20/12/2025 - Jornada 12</p>
+            </div>
+
             <div class="match-card" onclick="openMatchModal('Resumen del Partido', '5 - 4', 
                 `<div class='event-list'>
-                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Papoño</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Papoño</p></div><div class='penalty-icon'><i class='fas fa-futbol'></i></div></div>
                     <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Riki</p></div><i class='fas fa-futbol event-icon'></i></div>
                     <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Said (x2)</p></div><i class='fas fa-futbol event-icon'></i></div>
                     <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Arenas</p></div><i class='fas fa-futbol event-icon'></i></div>
                     <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Kuko</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
                 </div>`, 
                 ['assest/payito.JPG', 'assest/payo2.JPG'])">
-                
+        
                 <div class="teams-row">
                     <div class="team"><img src="assest/logo_turkish.jpg"><span>TURKISH DE LA TORRE</span></div>
                     <div class="score">5 - 4</div>
@@ -69,7 +86,7 @@
                 `<div class='event-list'>
                     <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Arenas</p></div><i class='fas fa-futbol event-icon'></i></div>
                     <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Jorge</p></div><i class='fas fa-futbol event-icon'></i></div>
-                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Carols</p></div><i class='fas fa-futbol event-icon'></i></div>
+                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Carlos</p></div><i class='fas fa-futbol event-icon'></i></div>
                     <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Diego (p.p)</p></div><i class='fas fa-futbol event-icon'></i></div>
                     <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Riki</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
                     <div class='event-row type-yellow'><div class='event-info'><h4>Amonestación</h4><p>Carlos</p></div><i class='fas fa-square event-icon' style='transform: rotate(90deg);'></i></div>
@@ -83,21 +100,6 @@
                     <div class="team"><img src="assest/logo_turkish.jpg"><span>TURKISH DE LA TORRE</span></div>
                 </div>
                 <p>06/12/2025 - Jornada 10</p>
-            </div>
-
-            <div class="match-card" onclick="openMatchModal('Resumen del Partido', '2 - 2', 
-                `<div class='event-list'>
-                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Said</p></div><i class='fas fa-futbol event-icon'></i></div>
-                    <div class='event-row type-goal'><div class='event-info'><h4>¡GOOL!</h4><p>Mario Flores</p></div><i class='fas fa-futbol event-icon'></i></div>
-                </div>`, 
-                ['assest/duendes.png'])">
-                
-                <div class="teams-row">
-                    <div class="team"><img src="assest/logo_turkish.jpg"><span>TURKISH DE LA TORRE</span></div>
-                    <div class="score">2 - 2</div>
-                    <div class="team"><img src="assest/duendes.png"><span>TEAM DUENDES</span></div>
-                </div>
-                <p>22/11/2025 - Jornada 9</p>
             </div>
 
         </div>
@@ -189,8 +191,6 @@
         </div>
         <div class="social-icons">
             <a href="https://www.instagram.com/turkishdelatorrecf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
     </footer>
 

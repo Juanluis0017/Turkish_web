@@ -147,8 +147,8 @@ body.dark-mode .theme-btn .fa-sun { display: none; }
 
 .tactic-dot { position: absolute; width: 40px; height: 40px; background: var(--primary-gold); border: 2px solid black; border-radius: 50%; color: black; font-weight: bold; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; transform: translate(-50%, -50%); box-shadow: 0 4px 8px rgba(0,0,0,0.4); z-index: 10; }
 .pos-gk { bottom: 5%; left: 50%; background: #000; color: #fff; border-color: var(--primary-gold); } 
-.pos-def-l { bottom: 25%; left: 25%; } .pos-def-c { bottom: 25%; left: 50%; } .pos-def-r { bottom: 25%; left: 75%; }
-.pos-mid-l { top: 45%; left: 35%; } .pos-mid-r { top: 45%; left: 65%; } .pos-st { top: 15%; left: 50%; background: white; }
+.pos-def-l { bottom: 27%; left: 15%; } .pos-def-c { bottom: 20%; left: 50%; } .pos-def-r { bottom: 27%; left: 85%; }
+.pos-mid-l { top: 35%; left: 15%; } .pos-mid-r { top: 35%; left: 85%; } .pos-st { top: 30%; left: 50%; }
 .tactic-title { text-align: center; color: var(--primary-gold); margin-bottom: 15px; text-transform: uppercase; font-weight: bold; }
 .tactic-name { position: absolute; top: 42px; left: 50%; transform: translateX(-50%); color: white; font-size: 0.75rem; font-weight: bold; text-shadow: 1px 1px 2px black; white-space: nowrap; background: rgba(0,0,0,0.5); padding: 2px 6px; border-radius: 4px; z-index: 20; }
 
@@ -243,4 +243,140 @@ footer { background-color: var(--primary-black); color: #ccc; padding: 40px 5%; 
     .pm-name { font-size: 2rem; }
     .squad-layout { flex-direction: column; } .field-column { width: 100%; position: relative; top: 0; margin-bottom: 40px; } .roster-column { width: 100%; } .roster-grid { grid-template-columns: repeat(2, 1fr); }
     header { flex-direction: column; gap: 10px; }
+}
+/* --- BANNER RESUMEN LIGA (NUEVO) --- */
+.league-banner {
+    background: linear-gradient(135deg, var(--primary-black), #2c2c2c); /* Fondo oscuro elegante */
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 40px; /* Separación con la tabla */
+    border-left: 6px solid var(--primary-gold); /* Detalle dorado lateral */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Marca de agua de fondo (opcional, queda muy pro) */
+.league-banner::before {
+    content: '2026';
+    position: absolute;
+    right: -20px;
+    bottom: -40px;
+    font-size: 10rem;
+    font-weight: 900;
+    color: rgba(255,255,255,0.03);
+    pointer-events: none;
+}
+
+.lb-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 3px solid var(--primary-gold);
+    background: #fff;
+    padding: 2px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.lb-info {
+    flex-grow: 1;
+    color: white;
+}
+
+.lb-title {
+    font-size: 2.5rem; /* "Liga" grande como tu dibujo */
+    font-weight: 800; /* Letra gruesa, tipo handwriting o sans */
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: 'Segoe UI', sans-serif; /* O una fuente tipo 'handwriting' si prefieres */
+    letter-spacing: 2px;
+}
+
+.lb-season {
+    font-size: 1.2rem;
+    color: var(--primary-gold);
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: block;
+    margin-top: -10px;
+}
+
+.lb-stats-row {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.lb-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.lb-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.lb-value {
+    font-size: 3.5rem; /* Numeros muy grandes */
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+}
+
+.lb-value span {
+    font-size: 1.5rem;
+    color: var(--primary-gold);
+    font-weight: 600;
+    vertical-align: super;
+}
+
+/* Responsive para movil */
+@media (max-width: 768px) {
+    .league-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .lb-stats-row {
+        justify-content: center;
+        gap: 30px;
+    }
+    .lb-title { font-size: 2rem; }
+    .lb-value { font-size: 2.5rem; }
+}
+/* --- ICONO PERSONALIZADO: PENALTI --- */
+.penalty-icon {
+    position: relative;
+    width: 35px;          /* Ancho de la portería */
+    height: 22px;         /* Alto de la portería */
+    border: 3px solid #2ecc71; /* Color VERDE para la portería */
+    border-bottom: none;  /* Quitamos la línea de abajo */
+    border-radius: 2px 2px 0 0; /* Un poco redondeado arriba */
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.penalty-icon i {
+    position: absolute;
+    bottom: -8px;         /* Bajamos el balón a la línea de gol */
+    font-size: 14px;      /* Pelota CHICA */
+    color: #2ecc71; /* Color del balón (negro u oscuro) */
+    background-color: #f9f9f9; /* Fondo para tapar un poco si es necesario */
+    border-radius: 50%;
+}
+
+/* Ajuste para modo noche */
+body.dark-mode .penalty-icon i {
+    color: #2ecc71;
+    background-color: #2a2a2a; /* Mismo gris que el fondo del evento */
 }
